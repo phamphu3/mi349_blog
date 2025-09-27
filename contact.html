@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MI349 Blog</title>
+    <meta name="description" content="Contact the author of MI349 Blog for questions, collaborations, or just to say hello.">
+</head>
+<body>
+    <header>
+        <h1>MI349 Blog</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Me</h2>
+            <form method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="reason">Reason for Contact:</label>
+                <select id="reason" name="reason" required>
+                    <option value="hi">Saying hi</option>
+                    <option value="contractor">Question</option>
+                    <option value="interview">Others</option>
+                </select>
+                <br><br>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="5" cols="40"></textarea>
+                <br><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Alley Pham
+    </footer>
+</body>
+</html>
