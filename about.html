@@ -5,32 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - MI349 Blog</title>
     <meta name="description" content="Learn more about the author of MI349 Blog, their background, interests, and story.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>MI349 Blog</h1>
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>About the Author</h2>
-            <img src="AlleyPham.JPG" alt="Author Profile Picture" style="max-width:100%;height:auto;">
-            <p>
-                Hello! My name is Phuong Uyen Pham, but I go by Alley. I'm a junior at Michigan State University, majoring in Information Science. My goal is to share insights, stories, and resources that inspire others to embrace lifelong learning and personal growth.
-            </p>
-            <p>
-                I'm looking forward to connecting with readers and fellow enthusiasts. Feel free to reach out through the contact page!
-            </p>
-            <h3>Fun Facts About Me</h3>
+        <div class="content" id="main-content">
+            <section>
+                <h2>About the Author</h2>
+                <figure>
+                    <img src="AlleyPham.JPG" class="floated" alt="Author Profile Picture">
+                    <figcaption>Alley Pham, Information Science major at MSU</figcaption>
+                </figure>
+                <p>
+                    Hello! My name is Phuong Uyen Pham, but I go by Alley. I'm a junior at Michigan State University, majoring in Information Science. My goal is to share insights, stories, and resources that inspire others to embrace lifelong learning and personal growth.
+                </p>
+                <p>
+                    I'm looking forward to connecting with readers and fellow enthusiasts. Feel free to reach out through the contact page!
+                </p>
+                <h3>Fun Facts About Me</h3>
+                <ul>
+                    <li>I have a passion for photography.</li>
+                    <li>I'm not a picky eater!</li>
+                </ul>
+            </section>
+        </div>
+        <aside class="sidebar" aria-label="Sidebar">
+            <h3>Quick Links</h3>
             <ul>
-                <li>I have a passion for photography.</li>
-                <li>I'm not a picky eater!</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </section>
+        </aside>
     </main>
     <footer>
         &copy; 2025 Alley Pham

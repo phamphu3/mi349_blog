@@ -5,46 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MI349 Blog - Home</title>
     <meta name="description" content="Welcome to MI349 Blog, sharing insights and stories on technology, learning, and creativity.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>MI349 Blog</h1>
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        <article>
-            <h2>The Power of Lifelong Learning</h2>
+        <div class="content" id="main-content">
+            <article class="post">
+                <h2>The Power of Lifelong Learning</h2>
+                <p class="meta"><time datetime="2025-09-20">September 20, 2025</time> | By Alley Pham</p>
+                <figure class="float-right">
+                    <img src="Blog1.png" alt="Person reading a book in a cozy room">
+                    <figcaption>Embracing new knowledge every day.</figcaption>
+                </figure>
+                <p class="clearfix">
+                    Lifelong learning is more than a buzzword—it's a mindset that empowers individuals to adapt, grow, and thrive in an ever-changing world. Whether you're picking up a new language, mastering a musical instrument, or exploring the latest advancements in technology, the journey of learning never truly ends. In today's fast-paced society, the ability to learn continuously is a valuable asset. It fosters curiosity, resilience, and innovation, allowing us to tackle challenges with confidence and creativity. By dedicating time each day to expand our knowledge, we not only enrich our own lives but also inspire those around us to pursue their passions. The benefits of lifelong learning extend beyond personal growth; they contribute to professional success, community engagement, and overall well-being. So, make learning a daily habit—read articles, attend workshops, ask questions, and share your discoveries. The world is full of opportunities waiting to be explored, and every step you take brings you closer to unlocking your full potential.
+                </p>
+            </article>
+            <article>
+                <h2>Technology and Creativity: A Perfect Match</h2>
+                <section>
+                    <time datetime="2025-09-15">September 15, 2025</time> | By Alley Pham
+                </section>
+                <figure>
+                    <img src="Blog2.png" alt="Laptop surrounded by colorful art supplies">
+                    <figcaption>Blending tech and art for innovation.</figcaption>
+                </figure>
+                <p>
+                    Technology has revolutionized the way we express creativity, opening doors to new forms of art, music, and storytelling. From digital painting to music production software, creative minds now have access to tools that were unimaginable just a few decades ago. The fusion of technology and creativity enables artists to reach global audiences, collaborate across borders, and experiment with innovative techniques. Social media platforms, online galleries, and virtual reality experiences have transformed the landscape of creative expression, making it more interactive and accessible. As technology continues to evolve, so do the possibilities for creative exploration. Embracing this synergy allows us to push boundaries, challenge conventions, and redefine what it means to be an artist in the digital age. Whether you're a seasoned professional or a curious beginner, the intersection of technology and creativity offers endless opportunities for growth and inspiration. So, pick up your digital brush, compose a new melody, or write a story that blends tradition with innovation—the future of creativity is yours to shape.
+                </p>
+            </article>
             <section>
-                <time datetime="2025-09-20">September 20, 2025</time> | By Alley Pham
-            </section>
-            <figure>
-                <img src="Blog1.png" alt="Person reading a book in a cozy room" style="max-width:100%;height:auto;">
-                <figcaption>Embracing new knowledge every day.</figcaption>
-            </figure>
-            <p>
-                Lifelong learning is more than a buzzword—it's a mindset that empowers individuals to adapt, grow, and thrive in an ever-changing world. Whether you're picking up a new language, mastering a musical instrument, or exploring the latest advancements in technology, the journey of learning never truly ends. In today's fast-paced society, the ability to learn continuously is a valuable asset. It fosters curiosity, resilience, and innovation, allowing us to tackle challenges with confidence and creativity. By dedicating time each day to expand our knowledge, we not only enrich our own lives but also inspire those around us to pursue their passions. The benefits of lifelong learning extend beyond personal growth; they contribute to professional success, community engagement, and overall well-being. So, make learning a daily habit—read articles, attend workshops, ask questions, and share your discoveries. The world is full of opportunities waiting to be explored, and every step you take brings you closer to unlocking your full potential.
-            </p>
-        </article>
-        <article>
-            <h2>Technology and Creativity: A Perfect Match</h2>
-            <section>
-                <time datetime="2025-09-15">September 15, 2025</time> | By Alley Pham
-            </section>
-            <figure>
-                <img src="Blog2.png" alt="Laptop surrounded by colorful art supplies" style="max-width:100%;height:auto;">
-                <figcaption>Blending tech and art for innovation.</figcaption>
-            </figure>
-            <p>
-                Technology has revolutionized the way we express creativity, opening doors to new forms of art, music, and storytelling. From digital painting to music production software, creative minds now have access to tools that were unimaginable just a few decades ago. The fusion of technology and creativity enables artists to reach global audiences, collaborate across borders, and experiment with innovative techniques. Social media platforms, online galleries, and virtual reality experiences have transformed the landscape of creative expression, making it more interactive and accessible. As technology continues to evolve, so do the possibilities for creative exploration. Embracing this synergy allows us to push boundaries, challenge conventions, and redefine what it means to be an artist in the digital age. Whether you're a seasoned professional or a curious beginner, the intersection of technology and creativity offers endless opportunities for growth and inspiration. So, pick up your digital brush, compose a new melody, or write a story that blends tradition with innovation—the future of creativity is yours to shape.
-            </p>
-        </article>
-        <section>
                 <h3>Learning Resources Comparison</h3>
-                <table border="1" style="border-collapse:collapse;width:100%;">
+                <table>
                     <thead>
                         <tr>
                             <th>Resource</th>
@@ -59,29 +59,36 @@
                             <td>High</td>
                         </tr>
                         <tr>
-                            <td>Books</td>
-                            <td>Print/Digital</td>
-                            <td>Medium</td>
-                        </tr>
-                        <tr>
-                            <td>Workshops</td>
-                            <td>In-person</td>
-                            <td>Variable</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        <section>
-            <h2>Subscribe to Our Newsletter</h2>
-            <form action="#" method="post">
-                <label for="email">Email address:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Sign Up</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        &copy; 2025 Alley Pham
-    </footer>
-</body>
-</html>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Resource</th>
+                                        <th>Type</th>
+                                        <th>Accessibility</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Online Courses</td>
+                                        <td>Digital</td>
+                                        <td>High</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Books</td>
+                                        <td>Print/Digital</td>
+                                        <td>Medium</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Workshops</td>
+                                        <td>In-person</td>
+                                        <td>Variable</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    <li><a href="https://github.com/phamphu3/mi349_blog" target="_blank" rel="noopener">GitHub Repo</a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer>
+            &copy; 2025 Alley Pham
+        </footer>

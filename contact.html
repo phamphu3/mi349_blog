@@ -5,86 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - MI349 Blog</title>
     <meta name="description" content="Contact the author of MI349 Blog for questions, collaborations, or just to say hello.">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 70vh;
-        }
-        section {
-            background: #fff;
-            padding: 2rem 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            max-width: 400px;
-            width: 100%;
-        }
-        form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-        form input, form textarea, form select {
-            width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        form button {
-            background: #0077cc;
-            color: #fff;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        form button:hover {
-            background: #005fa3;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>MI349 Blog</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="contact.html">Contact</a>
+    <header id="site-header">
+        <nav class="nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" aria-current="page">Contact</a>
         </nav>
     </header>
-    <main>
-        <section>
-            <h2>Contact Me</h2>
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="extra-details">
+    <main class="container layout-2col">
+        <section class="content" id="main-content">
+            <h2 class="mb-2">Contact Me</h2>
+            <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="extra-details">
                 <input type="hidden" name="form-name" value="contact" />
-                <p style="display:none;">
-                    <label>Extra Details: <input name="extra-details" /></label>
-                </p>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br><br>
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-                <br><br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" cols="40" required></textarea>
-                <br><br>
-                <button type="submit">Send</button>
+                <div class="hidden">
+                    <label class="label" for="extra-details">Extra Details:</label>
+                    <input name="extra-details" id="extra-details" />
+                </div>
+                <div class="row">
+                    <div class="field mb-1">
+                        <label class="label" for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="field mb-1">
+                        <label class="label" for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required class="mb-1">
+                </div>
+                <div class="field">
+                    <label class="label" for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required class="mb-2"></textarea>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn">Send</button>
+                    <button type="reset" class="btn secondary">Reset</button>
+                </div>
             </form>
         </section>
+        <aside class="sidebar" aria-label="Sidebar">
+            <div class="card sticky">
+                <h3>Contact Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://github.com/phamphu3/mi349_blog" target="_blank" rel="noopener">GitHub Repo</a></li>
+                    <li><a href="mailto:phamphu3@msu.edu">phamphu3@msu.edu</a></li>
+                </ul>
+            </div>
+        </aside>
     </main>
     <footer>
         &copy; 2025 Alley Pham
