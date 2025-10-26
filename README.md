@@ -24,3 +24,20 @@ Follow these steps to deploy and enable form submissions:
 	- Click on "Forms" in the left sidebar.
 	- You will see a list of form submissions, including those from your contact form.
 	- You can view, filter, and export submissions as needed.
+
+	## Responsive Design Lab
+
+	This site includes a small responsive lab to demonstrate common responsive patterns used in the stylesheet:
+
+	- Breakpoints used: 900px and 600px — layouts adapt at these widths (e.g., two-column -> single-column at 900px, tighter adjustments around 600px).
+	- Images and media are fluid (they use `max-width: 100%`) so they scale to their container.
+	- Multi-column layouts stack on narrow screens (columns collapse to a single column at the 900px breakpoint).
+	- Forms are built to be touch-friendly: full-width fields, generous tap targets, and increased spacing for mobile.
+	- Wide tables are horizontally scrollable so content remains readable on small screens (`overflow-x: auto` on table containers).
+
+	Links
+
+	- GitHub repository: https://github.com/phamphu3/mi349_blog
+	- Deployed site (Netlify): https://your-site-name.netlify.app  <!-- replace with your actual Netlify URL -->
+
+	If you'd like, I can update this file to include the real Netlify URL once you provide it or after a successful deploy.

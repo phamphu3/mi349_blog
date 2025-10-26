@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About - MI349 Blog</title>
     <meta name="description" content="Learn more about the author of MI349 Blog, their background, interests, and story.">
     <link rel="stylesheet" href="style.css">
@@ -10,14 +10,16 @@
 <body>
     <header>
         <h1>MI349 Blog</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <nav class="nav" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <div class="content" id="main-content">
+        <div class="content prose" id="main-content">
             <section>
                 <h2>About the Author</h2>
                 <figure>

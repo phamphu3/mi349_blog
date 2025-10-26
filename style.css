@@ -1,18 +1,27 @@
 /* MI349 Blog Global Stylesheet - Responsive, Accessible, Dark Theme Ready */
 :root {
-  --bg: #181a1b;
-  --panel: #232527;
-  --text: #eaeaea;
-  --muted: #a0a0a0;
-  --brand: #4fc3f7;
-  --link: #82b1ff;
+  /* WCAG-AA friendly palette (light theme) */
+  --text: #0f172a;       /* primary text */
+  --muted-text: #334155; /* muted / secondary text */
+  --bg: #ffffff;         /* page background */
+  --accent: #0ea5e9;     /* interactive / brand */
+  --card-bg: #f8fafc;    /* panel / card background */
+
+  /* compatibility variables used across the stylesheet */
+  --panel: var(--card-bg);
+  --muted: var(--muted-text);
+  --brand: var(--accent);
+  --link: var(--accent);
+
   --radius: 10px;
-  --shadow: 0 2px 12px rgba(0,0,0,0.18);
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
   --maxw: 1100px;
 }
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -22,8 +31,16 @@ body {
   background: var(--bg);
   color: var(--text);
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.6;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Media defaults: ensure images, video, canvas and SVG scale within their containers */
+img, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 a {
   color: var(--link);
@@ -44,17 +61,45 @@ a[aria-current="page"] {
 a[href^="mailto:"] {
   color: #ffb300;
 }
-h1, h2, h3, h4 {
+/* Accessible focus ring for keyboard users */
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+/* Heading rhythm: normalize top/bottom margins for consistent vertical rhythm */
+h1, h2, h3 {
   font-family: inherit;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 0.5rem;
   color: var(--brand);
 }
-h1 { font-size: 2.2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.2rem; }
+
+/* keep h4 default spacing similar but slightly smaller */
+h4 {
+  font-family: inherit;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--brand);
+}
+/* Mobile-first typographic scale */
+h1 { font-size: 1.75rem; line-height: 1.2; }
+h2 { font-size: 1.375rem; line-height: 1.3; }
+h3 { font-size: 1.125rem; line-height: 1.35; }
+
+p, li { font-size: 1rem; }
+
+/* Prose utility: vertical rhythm for consecutive paragraphs inside content areas */
+.prose p + p {
+  margin-top: 1rem;
+}
+
+/* Normalize paragraph margins as requested */
 p {
-  margin: 0 0 1.2rem 0;
+  margin: 0 0 1rem 0;
 }
 #site-header {
   position: sticky;
@@ -102,7 +147,11 @@ p {
   margin-bottom: 2rem;
 }
 .post {
-  composes: card;
+  /* duplicated from .card to avoid preprocessor-only 'composes' token */
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
   margin-bottom: 2rem;
 }
 .meta {
@@ -222,23 +271,59 @@ input[type="email"] {
 .mb-2 { margin-bottom: 2rem !important; }
 .center { text-align: center !important; }
 @media (max-width: 900px) {
+  /* Stack two-column layouts and similar helpers */
   .layout-2col {
     flex-direction: column;
   }
-  .sidebar {
-    width: 100%;
-    margin-top: 2rem;
-    max-width: none;
+  /* support other naming conventions */
+  .grid, .two-col, .layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
+  /* ensure content appears before sidebar when stacked */
+  .content { order: 1; }
+  .sidebar { order: 2; width: 100%; margin-top: 2rem; max-width: none; }
+
+  /* make floated figures behave responsively */
   figure.float-right, figure.float-left {
     float: none;
     margin: 0 auto 1rem auto;
     display: block;
     max-width: 100%;
   }
+
+  /* slightly larger body text for readability on small screens */
+  p, li { font-size: 1.05rem; }
+
+  /* headings tuned for mobile comfort */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+
+  /* allow horizontal scrolling for nav lists if they overflow */
+  nav ul, .nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 @media (prefers-reduced-motion: no-preference) {
   a, .btn {
     transition: color 0.2s, background 0.2s;
+  }
+}
+
+/* Extra-narrow screens: improve word wrapping and tighten nav spacing */
+@media (max-width: 380px) {
+  body {
+    word-break: break-word;
+  }
+
+  /* reduce nav gaps to avoid wrapping chaos on tiny screens */
+  .nav, nav ul {
+    display: flex;
+    gap: 0.25rem 0.5rem; /* row-gap column-gap */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact - MI349 Blog</title>
     <meta name="description" content="Contact the author of MI349 Blog for questions, collaborations, or just to say hello.">
     <link rel="stylesheet" href="style.css">
@@ -10,13 +10,15 @@
 <body>
     <header id="site-header">
         <nav class="nav" aria-label="Main Navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" aria-current="page">Contact</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main class="container layout-2col">
-        <section class="content" id="main-content">
+        <section class="content prose" id="main-content">
             <h2 class="mb-2">Contact Me</h2>
             <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="extra-details">
                 <input type="hidden" name="form-name" value="contact" />

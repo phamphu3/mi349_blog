@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MI349 Blog - Home</title>
     <meta name="description" content="Welcome to MI349 Blog, sharing insights and stories on technology, learning, and creativity.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="site-header">
         <h1>MI349 Blog</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <nav class="nav" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <div class="content" id="main-content">
+        <div class="content prose" id="main-content">
             <article class="post">
                 <h2>The Power of Lifelong Learning</h2>
                 <p class="meta"><time datetime="2025-09-20">September 20, 2025</time> | By Alley Pham</p>
@@ -44,7 +46,7 @@
             </article>
             <section>
                 <h3>Learning Resources Comparison</h3>
-                <table>
+                <table class="table">
                     <thead>
                         <tr>
                             <th>Resource</th>
@@ -59,36 +61,28 @@
                             <td>High</td>
                         </tr>
                         <tr>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Resource</th>
-                                        <th>Type</th>
-                                        <th>Accessibility</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Online Courses</td>
-                                        <td>Digital</td>
-                                        <td>High</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Books</td>
-                                        <td>Print/Digital</td>
-                                        <td>Medium</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Workshops</td>
-                                        <td>In-person</td>
-                                        <td>Variable</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                    <li><a href="https://github.com/phamphu3/mi349_blog" target="_blank" rel="noopener">GitHub Repo</a></li>
-                </ul>
-            </aside>
-        </main>
-        <footer>
-            &copy; 2025 Alley Pham
-        </footer>
+                            <td>Books</td>
+                            <td>Print/Digital</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <td>Workshops</td>
+                            <td>In-person</td>
+                            <td>Variable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <aside class="sidebar" aria-label="Sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="https://github.com/phamphu3/mi349_blog" target="_blank" rel="noopener">GitHub Repo</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        &copy; 2025 Alley Pham
+    </footer>
+</body>
+</html>
